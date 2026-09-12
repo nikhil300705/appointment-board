@@ -1,5 +1,4 @@
-const API_URL = "http://localhost:8000/api/appointments";
-
+const API_URL = `${import.meta.env.VITE_API_URL || "http://localhost:8000"}/api/appointments`;
 async function request(url, options = {}) {
   const response = await fetch(url, {
     headers: { "Content-Type": "application/json" },
